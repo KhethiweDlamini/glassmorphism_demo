@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>My Web Page</title>
+    <title>Simple Glass UI Demo</title>
     <meta
       name="description"
       content="A minimal HTML/CSS demo showcasing modern glassmorphism UI patterns with light and dark mode support."
@@ -33,23 +33,90 @@
   </head>
 
   <body>
-    <header>
-      <!--Add website name or logo here-->
-      <p>Header</p>
-    </header>
+    <main class="page">
+      <div class="container">
+        <!-- Top bar -->
+        <div class="top-bar glass">
+          <div class="brand">Glass UI Demo</div>
+          <div class="theme-toggle">
+            <span id="themeLabel">Dark</span>
+            <div class="toggle" id="toggleSwitch"></div>
+          </div>
+        </div>
 
-    <nav><!--Add website navigation here--></nav>
+        <!-- Hero -->
+        <section class="hero">
+          <h1>Glassmorphism, dissected.</h1>
+          <p>
+            Switch themes and adjust translucency, blur, and borders to see how
+            glass UI behaves in real time.
+          </p>
+        </section>
 
-    <main>
-      <!--Main website contect goes here-->
+        <!-- Demo cards -->
+        <section class="grid">
+          <div class="card glass" id="card-alpha" style="--glass-alpha: 0.08">
+            <div>
+              <h3>Translucency</h3>
+              <p>Controls background transparency.</p>
+            </div>
+            <div class="control">
+              <label>Opacity</label>
+              <input
+                type="range"
+                min="0.02"
+                max="0.25"
+                step="0.01"
+                value="0.08"
+                data-target="alpha"
+              />
+            </div>
+          </div>
+
+          <div class="card glass" id="card-blur" style="--glass-blur: 14px">
+            <div>
+              <h3>Blur</h3>
+              <p>Controls backdrop blur strength.</p>
+            </div>
+            <div class="control">
+              <label>Blur Radius</label>
+              <input
+                type="range"
+                min="0"
+                max="30"
+                step="1"
+                value="14"
+                data-target="blur"
+              />
+            </div>
+          </div>
+
+          <div class="card glass" id="card-border" style="--glass-border: 0.14">
+            <div>
+              <h3>Depth (Border)</h3>
+              <p>Controls edge definition.</p>
+            </div>
+            <div class="control">
+              <label>Border Strength</label>
+              <input
+                type="range"
+                min="0.04"
+                max="0.3"
+                step="0.01"
+                value="0.14"
+                data-target="border"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <p>
+          Open sourced and hosted on
+          <a href="" target="_blank">GitHub</a>
+        </p>
+      </footer>
     </main>
-
-    <footer>
-      <!--Add Copyright notices and other footer content here-->
-      <p>Footer</p>
-    </footer>
-
-    <!--JavaScript and Other Scripts-->
-    <script src="js/scripts.js"></script>
   </body>
 </html>
