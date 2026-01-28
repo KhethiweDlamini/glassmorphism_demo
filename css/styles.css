@@ -6,7 +6,7 @@
   --text-secondary: rgba(245, 247, 251, 0.7);
   --text-muted: rgba(245, 247, 251, 0.45);
 
-  --accent: #f4f3fc;
+  --accent: #a9a1e7;
 
   --radius-lg: 20px;
   --radius-md: 16px;
@@ -21,7 +21,7 @@ body.lightmode {
   --text-secondary: rgba(15, 23, 42, 0.7);
   --text-muted: rgba(15, 23, 42, 0.45);
 
-  --accent: #0f172a;
+  --accent: #808591;
 }
 
 body.lightmode .toggle {
@@ -82,9 +82,7 @@ body {
   max-width: var(--max-width);
 }
 
-/* =========================
-         Glass base (theme-aware)
-         ========================= */
+/* Glass base (theme-aware)*/
 .glass {
   background: rgba(255, 255, 255, var(--glass-alpha, 0.08));
   backdrop-filter: blur(var(--glass-blur, 14px)) saturate(140%);
@@ -132,9 +130,7 @@ body.lightmode .glass {
   cursor: pointer;
 }
 
-/* =========================
-         Hero
-         ========================= */
+/* Hero */
 .hero {
   text-align: center;
   margin-bottom: 72px;

@@ -9,14 +9,14 @@ toggle.addEventListener("click", () => {
   label.textContent = isLight ? "Light" : "Dark";
 });
 
-/* =========================
-         Slider logic
-         ========================= */
+/* Slider logic */
 const cards = {
   alpha: document.getElementById("card-alpha"),
   blur: document.getElementById("card-blur"),
   border: document.getElementById("card-border"),
 };
+
+const alphaReadout = document.querySelector("#card-alpha .alpha-value");
 
 document.querySelectorAll('input[type="range"]').forEach((slider) => {
   slider.addEventListener("input", (e) => {
@@ -25,6 +25,9 @@ document.querySelectorAll('input[type="range"]').forEach((slider) => {
 
     if (type === "alpha") {
       cards.alpha.style.setProperty("--glass-alpha", value);
+      if (alphaReadout) {
+        alphaReadout.textContent = value;
+      }
     }
     if (type === "blur") {
       cards.blur.style.setProperty("--glass-blur", `${value}px`);

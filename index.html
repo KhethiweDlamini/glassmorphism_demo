@@ -46,10 +46,11 @@
 
         <!-- Hero -->
         <section class="hero">
-          <h1>Glassmorphism, dissected.</h1>
+          <h1>Glassmorphism, made simple.</h1>
           <p>
-            Switch themes and adjust translucency, blur, and borders to see how
-            glass UI behaves in real time.
+            Play around with the sliders to see how to use CSS to adjust the
+            transparency, blur, and border of the tiles below to achieve a nice
+            glassy finish.
           </p>
         </section>
 
@@ -57,19 +58,25 @@
         <section class="grid">
           <div class="card glass" id="card-alpha" style="--glass-alpha: 0.08">
             <div>
-              <h3>Translucency</h3>
+              <h3>Transparency</h3>
               <p>Controls background transparency.</p>
             </div>
             <div class="control">
               <label>Opacity</label>
-              <input
-                type="range"
-                min="0.02"
-                max="0.25"
-                step="0.01"
-                value="0.08"
-                data-target="alpha"
-              />
+              <div>
+                <input
+                  type="range"
+                  min="0.00"
+                  max="1"
+                  step="0.01"
+                  value="0.08"
+                  data-target="alpha"
+                />
+              </div>
+              <label class="css-readout">
+                background: rgba(255, 255, 255,
+                <span class="alpha-value">0.08</span>);
+              </label>
             </div>
           </div>
 
