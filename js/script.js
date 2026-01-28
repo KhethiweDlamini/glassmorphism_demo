@@ -1,14 +1,12 @@
-/* =========================
-         Theme toggle
-         ========================= */
-const toggleSwitch = document.getElementById("toggleSwitch");
+/* Theme toggle */
+const toggle = document.getElementById("toggleSwitch");
 const label = document.getElementById("themeLabel");
 
-toggleSwitch.addEventListener("click", () => {
-  document.body.classList.toggle("lightmode");
-  label.textContent = document.body.classList.contains("lightmode")
-    ? "Light"
-    : "Dark";
+toggle.addEventListener("click", () => {
+  const isLight = document.body.classList.toggle("lightmode");
+
+  toggle.classList.toggle("lightmode", isLight);
+  label.textContent = isLight ? "Light" : "Dark";
 });
 
 /* =========================
